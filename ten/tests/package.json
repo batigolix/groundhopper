@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@jitesoft/random-string": "^1.4.3",
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2",
+    "cypress": "^13.6.2"
+  },
+  "scripts": {},
+  "dependencies": {
+    "cypress-visual-regression": "^5.0.2"
+  }
+}
