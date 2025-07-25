@@ -1,0 +1,15 @@
+#!/bin/bash
+
+## Description: Run phpmd checks on code
+## Usage: phpmd
+## Example: "ddev phpmd path/to/module/folder" to scan a specific folder or "ddev phpmd" to scan everything
+
+cd /var/www/html/
+if [ -z "$@" ]
+then
+      vendor/bin/phpmd web/modules/custom text ./phpmd-ruleset.xml
+      vendor/bin/phpmd web/themes/custom text ./phpmd-ruleset.xml
+else
+      vendor/bin/phpmd $@ text ./phpmd-ruleset.xml
+fi
+

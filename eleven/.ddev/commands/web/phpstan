@@ -1,0 +1,15 @@
+#!/bin/bash
+
+## Description: Run phpstan checks on code
+## Usage: phpstan
+## Example: "ddev phpstan"
+
+vendor/bin/phpstan analyze $@
+
+if [ -z "$@" ]
+then
+      vendor/bin/phpstan analyze web/modules/custom
+      vendor/bin/phpstan analyze web/themes/custom
+else
+      vendor/bin/phpstan analyze $@
+fi

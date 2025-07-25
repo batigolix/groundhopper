@@ -1,0 +1,9 @@
+#!/bin/bash
+## Description: Run flood
+## Usage: flood
+## Example: "ddev flood"
+for i in {1..33}
+do
+   curl -L -X POST ${DDEV_PRIMARY_URL}/user/login -d "name=jim&pass=jim&form_id=user_login_form&op=Log In"
+done
+

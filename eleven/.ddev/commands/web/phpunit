@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## Description: Run phpunit
+## Usage: phpunit some-folder
+## Example: "ddev phpunit path/to/module"
+
+cd /var/www/html/web
+../vendor/bin/phpunit -c core -vvv --debug $@
